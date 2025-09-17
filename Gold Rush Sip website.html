@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Rush Sip | Simply Hydrate.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a202c;
+            background-color: #f7fafc;
+        }
+        .text-shadow-md {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .bg-gradient-custom {
+            background-image: linear-gradient(135deg, #fde68a 0%, #fcd34d 100%);
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+        }
+        .file-upload-label {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .file-upload-label:hover {
+            background-color: #fefcbf;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-yellow-500">
+                Gold Rush Sip
+            </div>
+            <div class="space-x-4">
+                <a href="#about" class="text-gray-600 hover:text-yellow-500 transition-colors duration-300">About</a>
+                <a href="#benefits" class="text-gray-600 hover:text-yellow-500 transition-colors duration-300">Benefits</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-yellow-500 transition-colors duration-300">Testimonials</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-custom text-white py-20 rounded-b-3xl">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-yellow-950 text-shadow-md mb-4">
+                Simply Hydrate.
+            </h1>
+            <p class="text-xl md:text-2xl text-yellow-900 mb-8">
+                The ultimate hydration for a healthier you.
+            </p>
+            <button onclick="document.getElementById('product').scrollIntoView({behavior: 'smooth'})"
+                    class="bg-white text-yellow-500 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-50 transition-colors duration-300">
+                Shop Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Product and Purchase Section -->
+    <section id="product" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <!-- Product Image and Uploader -->
+                <div class="flex flex-col items-center">
+                    <div class="product-image rounded-xl shadow-lg overflow-hidden">
+                        <img id="productImage" src="/file/uploaded:Screenshot 2025-09-11 at 11.50.45 AM.jpg-aa34a8a2-5fb2-4199-986e-c3719ca74494" alt="Hydra-Lemon product bottle" class="w-full h-auto">
+                    </div>
+                    <label for="imageUpload" class="file-upload-label mt-4 text-center px-4 py-2 border rounded-full text-yellow-700 bg-yellow-100 border-yellow-300 hover:bg-yellow-200 transition-colors">
+                        写真をアップロード
+                    </label>
+                    <input type="file" id="imageUpload" class="hidden" accept="image/*">
+                </div>
+                <!-- Purchase Options -->
+                <div class="w-full max-w-md">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Gold Rush Sip Beverage</h2>
+                    <p class="text-gray-600 text-lg mb-6">
+                        Enjoy pure, delicious hydration right out of the bottle.
+                    </p>
+                    <div class="space-y-4 mb-6">
+                        <!-- Purchase Option Dropdown -->
+                        <div>
+                            <label for="option" class="block text-gray-700 font-semibold mb-2">Select your option:</label>
+                            <select id="option" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                <option value="starter">1 Bottle</option>
+                                <option value="twelve">12-Bottle Case</option>
+                                <option value="subscription">Monthly Subscription (12 Bottles/month)</option>
+                            </select>
+                        </div>
+                        <!-- Quantity Input -->
+                        <div>
+                            <label for="quantity" class="block text-gray-700 font-semibold mb-2">Quantity:</label>
+                            <input type="number" id="quantity" value="1" min="1" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                    </div>
+                    <!-- Price and Add to Cart Button -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between">
+                        <span id="price" class="text-3xl font-bold text-gray-800 mb-4 sm:mb-0">$2.99</span>
+                        <button onclick="alert('商品がカートに追加されました！')"
+                                class="bg-yellow-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition-colors duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Gold Rush Sip</h2>
+                <p class="text-gray-600 text-lg">
+                    Tired of sugary, artificial sports drinks? Gold Rush Sip was created for people who want pure, effective hydration without the unnecessary additives. Our philosophy is simple: keep it real, keep it clean, and keep it delicious.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose Gold Rush Sip?</h2>
+                <p class="text-gray-600 text-lg">
+                    We believe true hydration comes from natural ingredients that work in harmony with your body.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 bg-gray-50 rounded-xl shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-12 h-12 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pure & Simple</h3>
+                    <p class="text-gray-500">
+                        Our drink is made with just a few natural ingredients, free from artificial colors, flavors, and preservatives.
+                    </p>
+                </div>
+                <div class="p-8 bg-gray-50 rounded-xl shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-12 h-12 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2.45 13.59L12 17.5l2.45-1.91c.2-.15.45-.2.68-.14.23.06.4.24.46.47.06.23.01.48-.14.68l-3.2 2.5a.75.75 0 01-.96 0l-3.2-2.5a.75.75 0 01-.14-.68c.06-.23.23-.41.46-.47.23-.06.48-.01.68.14z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Refreshingly Delicious</h3>
+                    <p class="text-gray-500">
+                        A zesty lemon flavor that's just right. Enjoy a clean, crisp taste that you'll look forward to every time.
+                    </p>
+                </div>
+                <div class="p-8 bg-gray-50 rounded-xl shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-12 h-12 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.75 14.5L7.75 12l1.5-1.5L10.25 12l2.5-2.5L14 10.25l-2.75 2.75-1.5-1.5-1.25 1.25z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Smart Choice</h3>
+                    <p class="text-gray-500">
+                        Gold Rush Sip provides essential electrolytes to help you stay active and feel great, without the sugar crash.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-white rounded-xl shadow-md flex flex-col">
+                    <p class="italic text-gray-600 mb-4">
+                        "When I drink this after a workout, it feels like it just soaks into my body. Most sports drinks on the market are too sweet, but this has the perfect amount of sweetness and a great lemon flavor. I love knowing it has simple, natural ingredients."
+                    </p>
+                    <p class="mt-auto text-yellow-500 font-semibold">- A-san (20s, Male)</p>
+                </div>
+                <div class="p-8 bg-white rounded-xl shadow-md flex flex-col">
+                    <p class="italic text-gray-600 mb-4">
+                        "I started drinking this to prevent heatstroke in the summer. I always have a case ready in the fridge so I can grab one anytime. It's so refreshing and easy to drink. The zesty flavor really helps me feel refreshed when I'm tired."
+                    </p>
+                    <p class="mt-auto text-yellow-500 font-semibold">- B-san (30s, Female)</p>
+                </div>
+                <div class="p-8 bg-white rounded-xl shadow-md flex flex-col">
+                    <p class="italic text-gray-600 mb-4">
+                        "My coworker recommended it to me. Honestly, I didn't expect it to be this delicious. The lemon aroma is so refreshing, and it's a great way to take a break during work. Once you start drinking this, you can't go back to other sports drinks."
+                    </p>
+                    <p class="mt-auto text-yellow-500 font-semibold">- C-san (40s, Male)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 rounded-t-3xl mt-20">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2023 Gold Rush Sip. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const priceDisplay = document.getElementById('price');
+            const optionSelect = document.getElementById('option');
+            const quantityInput = document.getElementById('quantity');
+            const productImage = document.getElementById('productImage');
+            const imageUpload = document.getElementById('imageUpload');
+            
+            const prices = {
+                starter: 2.99,
+                twelve: 29.99,
+                subscription: 24.99
+            };
+
+            const updatePrice = () => {
+                const selectedOption = optionSelect.value;
+                const quantity = parseInt(quantityInput.value);
+                let price = prices[selectedOption];
+                if (selectedOption === 'twelve') {
+                    price = prices[selectedOption] * quantity;
+                } else if (selectedOption === 'subscription') {
+                    price = prices[selectedOption];
+                } else { // starter
+                    price = prices[selectedOption] * quantity;
+                }
+                priceDisplay.textContent = `$${price.toFixed(2)}`;
+            };
+
+            optionSelect.addEventListener('change', updatePrice);
+            quantityInput.addEventListener('input', updatePrice);
+            
+            imageUpload.addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        productImage.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            updatePrice();
+        });
+    </script>
+</body>
+</html>
